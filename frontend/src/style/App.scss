@@ -1,0 +1,241 @@
+h2 {
+  font-family: Heebo;
+  font-size: 60px;
+  color: #2d2d2d;
+  font-weight: 900;
+}
+p,
+a {
+  font-family: GroteskLight;
+  font-size: 24px;
+  color: #2d2d2d;
+}
+.Find {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  div {
+    width: 50%;
+    display: flex;
+    margin-bottom: 82px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 19px;
+      color: #fafafa;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    p.description {
+      margin: 0 112px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      font-weight: 200;
+      margin-bottom: 87px;
+    }
+    a.findButton {
+      background: #ffffffeb;
+      border-radius: 8px;
+      font-family: GroteskLight;
+      font-size: 21px;
+      padding: 21px 17px;
+      letter-spacing: 1.1px;
+      text-align: center;
+      font-weight: 200;
+      box-shadow: 0 2px 11px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      -webkit-font-smoothing: antialiased;
+      transition: 0.3s;
+    }
+    a.findButton:hover {
+      background: #ffffff;
+    }
+  }
+}
+.findEmployer {
+  background: linear-gradient(
+      129deg,
+      rgba(83, 27, 1, 0.18) 12%,
+      rgba(178, 113, 75, 0.33) 83%,
+      rgba(179, 114, 76, 0.33) 83%
+    ),
+    url("https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/maid-bg.png");
+}
+.findEmployee {
+  background: linear-gradient(
+      229deg,
+      rgba(116, 203, 249, 0.35) 9%,
+      rgba(26, 67, 177, 0.31) 78%
+    ),
+    url("https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/mum-bg.png");
+  background-size: cover;
+}
+
+.Feed {
+  background: #f9f7f7;
+  padding: 81px 139px;
+  .bar:before {
+    content: "";
+    position: relative;
+    right: 15px;
+    border: 16px #ffc094 solid;
+    border-width: 0 0 0 16px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+  .feedTab {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 104px;
+    h2 {
+      display: inline-block;
+      color: #c5c4c4;
+      margin: 0;
+    }
+  }
+  a {
+    width: 298px;
+    height: 79px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+  }
+  a.active {
+    background: #ffffff;
+    box-shadow: 0 10px 50px 0 rgba(148, 35, 0, 0.1);
+    border-radius: 6px;
+    transition: ease 0.7s;
+    h2 {
+      background: -webkit-linear-gradient(0deg, #ff503e, #f9a966);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: ease 0.7s;
+    }
+  }
+  div.active {
+    display: block;
+  }
+  div.hidden {
+    display: none;
+  }
+  .logReg {
+    font-family: URWGrotesk-Regular3;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    background: linear-gradient(
+      to right,
+      #f9a966 0%,
+      #ff503e 50%,
+      #f9a966 100%
+    );
+    background-size: 200%;
+    border-radius: 6px;
+    padding: 0 27px;
+    margin: 78px auto;
+    transition: all 0.3s ease-out 0s;
+  }
+  .logReg:hover {
+    background-position: right center;
+  }
+  a.logReg {
+    width: fit-content;
+  }
+}
+.employeeList {
+  display: none;
+}
+.employerList {
+  display: block;
+}
+.Features {
+  padding: 115px 0;
+  .description {
+    padding: 77px;
+    .capital {
+      font-family: Heebo;
+      font-size: 14px;
+      letter-spacing: 1.79px;
+      text-align: center;
+      font-weight: 800;
+    }
+    h2.slogan {
+      font-family: Heebo;
+      font-size: 60px;
+      text-align: center;
+      line-height: 86px;
+      font-weight: 900;
+      margin: 0;
+    }
+    .accent {
+      color: #ed721d;
+    }
+    .intro {
+      font-family: Grotesk-Regular2;
+      max-width: 714px;
+      margin: 24px auto 0;
+      font-size: 20px;
+      text-align: center;
+      line-height: 26px;
+      -webkit-font-smoothing: antialiased;
+      .light {
+        color: #918f8f;
+      }
+    }
+  }
+  .featuresContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: -39px;
+    .featuresCard {
+      margin: 0 18px 50px;
+      border-radius: 6px;
+      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.1);
+      transform: translateY(0);
+      background-color: #fff;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      box-sizing: border-box;
+      position: relative;
+      width: 405px;
+      height: 358px;
+      padding: 37px 24.5px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      .cardContainer {
+        position: absolute;
+        bottom: 37px;
+      }
+      .step {
+        font-family: URWGrotesk-Regular3;
+        margin: 0 0 9px;
+      }
+      .instruction {
+        font-family: GroteskLight;
+        font-size: 18px;
+        color: rgba(45, 45, 45, 0.5);
+        font-weight: 200;
+        margin: 0;
+      }
+      .iconMini {
+        vertical-align: middle;
+        margin-right: 9px;
+      }
+      .iconBig {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        top: 10px;
+      }
+    }
+    .featuresCard:hover {
+      box-shadow: 0 20px 75px rgba(0, 0, 0, 0.1);
+      transform: translateY(-3px);
+    }
+  }
+}

@@ -1,0 +1,130 @@
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+.footer {
+  display: flex;
+  background-color: #f9f7f7;
+  justify-content: center;
+  > div {
+    width: 1140px;
+    display: flex;
+    margin: 0 50px;
+    flex-direction: column;
+  }
+  .wrapper {
+    display: flex;
+    width: 100%;
+    margin: 114px 0 48px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(45, 45, 45, 0.12);
+  }
+  .subscription {
+    max-width: 347px;
+    p {
+      font-family: GroteskLight;
+      font-size: 18px;
+      color: rgba(45, 45, 45, 0.5);
+      font-weight: 200;
+      margin: 7px 0 27px;
+    }
+    .logo {
+      max-width: 193px;
+      margin-top: 31px;
+    }
+    .subscriptionBox {
+      white-space: nowrap;
+      * {
+        border-radius: 6px;
+      }
+      input[type="email"] {
+        border: none;
+        background: #f2f0f0;
+        padding-left: 14px;
+        max-width: 259px;
+        width: 259px;
+        height: 48px;
+        margin-right: 22px;
+        font-family: Grotesk-Regular2;
+        font-size: 18px;
+        color: rgba(45, 45, 45, 0.5);
+        -webkit-font-smoothing: antialiased;
+      }
+      input[type="email"]::placeholder {
+        font-family: Grotesk-Regular2;
+        font-size: 18px;
+        color: rgba(45, 45, 45, 0.5);
+      }
+      button {
+        background: transparent;
+        cursor: pointer;
+        border: 1px solid #e8e4e4;
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+  .links {
+    display: flex;
+    width: 251px;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    h3 {
+      font-family: URWGrotesk-Regular2;
+      font-size: 21px;
+      color: rgba(45, 45, 45, 0.74);
+      font-weight: 400;
+      margin-bottom: 31px;
+    }
+    a {
+      font-family: GroteskLight;
+      text-decoration: none;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      color: rgba(45, 45, 45, 0.5);
+      font-weight: 200;
+      display: block;
+      margin-bottom: 13px;
+    }
+  }
+  .contact {
+    margin-right: 53px;
+    .info {
+      font-family: Grotesk-Regular2;
+      font-size: 21px;
+      color: rgba(45, 45, 45, 0.74);
+      margin: 0 0 47px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .label {
+      font-family: GroteskLight;
+      font-size: 18px;
+      color: rgba(45, 45, 45, 0.5);
+      font-weight: 200;
+      margin-bottom: 7px;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+  .bottomLine {
+    height: 76px;
+    justify-content: space-between;
+    display: flex;
+    * {
+      font-family: GroteskLight;
+      -webkit-font-smoothing: antialiased;
+      color: rgba(45, 45, 45, 0.5);
+    }
+    .miniNav {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        margin-right: 21.5px;
+        font-size: 12px;
+      }
+    }
+    .copyright {
+      font-size: 18px;
+    }
+  }
+}

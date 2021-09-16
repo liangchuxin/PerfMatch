@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>mail</title>
+    <defs>
+        <path d="M20.0000859,3 C21.6523706,3 23.0000859,4.34771525 23.0000859,6 L23.0000859,18 C23.0000859,19.6522847 21.6523706,21 20.0000859,21 L4.00008586,21 C2.34780111,21 1.00008586,19.6522847 1.00008586,18 L1.00008586,6 C1.00008586,4.34771525 2.34780111,3 4.00008586,3 L20.0000859,3 Z M21,7.92 L12.5735482,13.8192319 C12.2292281,14.060256 11.7709437,14.060256 11.4266235,13.8192319 L11.4266235,13.8192319 L3,7.921 L3.00008586,18 C3.00008586,18.5477153 3.45237061,19 4.00008586,19 L20.0000859,19 C20.5478011,19 21.0000859,18.5477153 21.0000859,18 L21,7.92 Z M20.0000859,5 L4.00008586,5 C3.61208728,5 3.27197793,5.22696691 3.10661548,5.55404305 L12.0000859,11.7793444 L20.8935562,5.55404305 C20.7281938,5.22696691 20.3880844,5 20.0000859,5 Z" id="path-1"></path>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sign-up" transform="translate(-546.000000, -437.000000)">
+            <g id="Group-4" transform="translate(506.000000, 314.000000)">
+                <g id="Date-of-Birth" transform="translate(0.000000, 99.000000)">
+                    <g id="mail" transform="translate(39.000000, 21.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Combined-Shape" fill="#CDCECF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="Group" mask="url(#mask-2)" fill="#CDCECF">
+                            <g id="COLOR/-black">
+                                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

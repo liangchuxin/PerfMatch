@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da1386e8.chunk.css",
+    "main.js": "/static/js/main.e6e1d618.chunk.js",
+    "main.js.map": "/static/js/main.e6e1d618.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.95b654fe.js",
+    "runtime-main.js.map": "/static/js/runtime-main.95b654fe.js.map",
+    "static/js/2.ab9fbc9f.chunk.js": "/static/js/2.ab9fbc9f.chunk.js",
+    "static/js/2.ab9fbc9f.chunk.js.map": "/static/js/2.ab9fbc9f.chunk.js.map",
+    "static/js/3.4cbd19c7.chunk.js": "/static/js/3.4cbd19c7.chunk.js",
+    "static/js/3.4cbd19c7.chunk.js.map": "/static/js/3.4cbd19c7.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.da1386e8.chunk.css.map": "/static/css/main.da1386e8.chunk.css.map",
+    "static/js/2.ab9fbc9f.chunk.js.LICENSE.txt": "/static/js/2.ab9fbc9f.chunk.js.LICENSE.txt",
+    "static/media/arrow-right-black.319dcc43.svg": "/static/media/arrow-right-black.319dcc43.svg",
+    "static/media/arrow-right.94c965dd.svg": "/static/media/arrow-right.94c965dd.svg",
+    "static/media/check-circle.1b564a38.svg": "/static/media/check-circle.1b564a38.svg",
+    "static/media/edit-3.61bf46f8.svg": "/static/media/edit-3.61bf46f8.svg",
+    "static/media/footer-logo.a867c355.png": "/static/media/footer-logo.a867c355.png",
+    "static/media/grid.47949ca4.svg": "/static/media/grid.47949ca4.svg",
+    "static/media/large-check-circle.c590f1f3.svg": "/static/media/large-check-circle.c590f1f3.svg",
+    "static/media/large-edit-3.7ac47cdc.svg": "/static/media/large-edit-3.7ac47cdc.svg",
+    "static/media/large-grid.7bf1b241.svg": "/static/media/large-grid.7bf1b241.svg",
+    "static/media/large-mail.c0f491e2.svg": "/static/media/large-mail.c0f491e2.svg",
+    "static/media/large-star.4632febb.svg": "/static/media/large-star.4632febb.svg",
+    "static/media/large-user-plus.229d5991.svg": "/static/media/large-user-plus.229d5991.svg",
+    "static/media/lock.164d9737.svg": "/static/media/lock.164d9737.svg",
+    "static/media/logo.2d9d928e.png": "/static/media/logo.2d9d928e.png",
+    "static/media/mail-light.4f55c933.svg": "/static/media/mail-light.4f55c933.svg",
+    "static/media/mail.fe539fe0.svg": "/static/media/mail.fe539fe0.svg",
+    "static/media/star.1db22c0e.svg": "/static/media/star.1db22c0e.svg",
+    "static/media/user-plus.3529895c.svg": "/static/media/user-plus.3529895c.svg",
+    "static/media/user.4cd209e5.svg": "/static/media/user.4cd209e5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95b654fe.js",
+    "static/js/2.ab9fbc9f.chunk.js",
+    "static/css/main.da1386e8.chunk.css",
+    "static/js/main.e6e1d618.chunk.js"
+  ]
+}
