@@ -25,6 +25,14 @@ import arrowRight from "../icons/arrow-right.svg";
 function HomePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    // document.addEventListener("scroll", () => {
+    //   const isTop = window.scrollY < 100;
+    //   if (isTop !== this.state.isTop) {
+    //     console.log("Change isTop");
+    //     this.setState({ isTop: isTop });
+    //     console.log(this.state.dropdownMenu);
+    //   }
+    // });
   }, []);
 
   const [isActive, setActive] = useState(true);
@@ -39,7 +47,7 @@ function HomePage() {
       name: "Jake",
       age: "33",
       picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/profile-john.png",
+        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-john.png",
       descrip:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
@@ -48,7 +56,7 @@ function HomePage() {
       name: "Milena",
       age: "35",
       picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/profile-jane.png",
+        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jane.png",
       descrip:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
@@ -57,7 +65,7 @@ function HomePage() {
       name: "Joseph",
       age: "53",
       picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/profile-jack.png",
+        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jack.png",
       descrip:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
@@ -69,7 +77,7 @@ function HomePage() {
       name: "John",
       age: "33",
       picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/profile-john.png",
+        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-john.png",
       descrip:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
@@ -78,7 +86,7 @@ function HomePage() {
       name: "Mary",
       age: "35",
       picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/profile-jane.png",
+        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jane.png",
       descrip:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
@@ -87,7 +95,7 @@ function HomePage() {
       name: "Jack",
       age: "53",
       picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/profile-jack.png",
+        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jack.png",
       descrip:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
@@ -194,9 +202,7 @@ function HomePage() {
             <h2>Employees</h2>
           </a>
         </div>
-        <div id="employerList"
-        className={isActive ? "active" : "hidden"}
-        >
+        <div id="employerList" className={isActive ? "active" : "hidden"}>
           <MatchBlock employeeFeed={employerFeed} />
         </div>
         <div

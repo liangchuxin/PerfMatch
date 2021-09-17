@@ -1,3 +1,4 @@
+h1,
 h2 {
   font-family: Heebo;
   font-size: 60px;
@@ -21,6 +22,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    h1,
     h2 {
       margin-bottom: 19px;
       color: #fafafa;
@@ -59,7 +61,7 @@ a {
       rgba(178, 113, 75, 0.33) 83%,
       rgba(179, 114, 76, 0.33) 83%
     ),
-    url("https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/maid-bg.png");
+    url("https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/maid-bg.png");
 }
 .findEmployee {
   background: linear-gradient(
@@ -67,7 +69,7 @@ a {
       rgba(116, 203, 249, 0.35) 9%,
       rgba(26, 67, 177, 0.31) 78%
     ),
-    url("https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch/images/mum-bg.png");
+    url("https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/mum-bg.png");
   background-size: cover;
 }
 

@@ -1,0 +1,140 @@
+.icon img {
+  vertical-align: bottom;
+}
+.Find {
+  justify-content: center;
+  background-size: cover !important;
+  .full {
+    .icon img {
+      margin-right: 12px;
+    }
+  }
+}
+.Find.findEmployer,
+.Find.findEmployee {
+  height: calc(-84px + 100vh) !important;
+}
+.Find.findEmployee {
+  background: linear-gradient(
+      229deg,
+      rgba(116, 203, 249, 0.35) 9%,
+      rgba(26, 67, 177, 0.31) 78%
+    ),
+    url("https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/mum-bg-wide.png");
+}
+.infoCollection {
+  height: 100vh;
+  .progress {
+    background: #f9f7f7;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    .tabs {
+      padding: 24px 194px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        padding-top: 26px;
+        padding-bottom: 26px;
+      }
+      span.tab {
+        padding: 26px 18px;
+        font-family: GroteskLight;
+        font-size: 21px;
+        letter-spacing: 1.5px;
+        text-align: right;
+        -webkit-font-smoothing: antialiased;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      span.tab.active {
+        background: #ffffff;
+        font-family: Grotesk-Regular2;
+        color: #ed721d;
+      }
+    }
+  }
+  .fields {
+    justify-content: center;
+    height: calc(100vh - 125px);
+  }
+  .fields,
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ::placeholder {
+      color: #cdcecf;
+    }
+    > form > div {
+      margin-bottom: 19px;
+      width: 100%;
+    }
+    input,
+    select {
+      padding-left: 32px;
+      padding-right: 32px;
+      height: 70px;
+    }
+    select {
+      font-family: URWGrotesk-Regular2;
+      -webkit-font-smoothing: antialiased;
+    }
+    .label {
+      font-family: URWGroteskWid-Regular2;
+      font-size: 24px;
+      text-align: right;
+      line-height: 29px;
+      font-weight: 400;
+      margin-right: 33.5px;
+      width: 196px;
+    }
+    .fieldGroup {
+      width: 713px;
+    }
+    * > * {
+      display: inline-block;
+      box-sizing: border-box;
+    }
+    .birth {
+      select {
+        margin-right: 9px;
+        width: calc(33.3% - 9px);
+      }
+    }
+    .fullCol {
+      input,
+      select {
+        width: calc(100% - 9px);
+      }
+    }
+    .twoCol {
+      input,
+      select {
+        margin-right: 9px;
+        width: calc(50% - 9px);
+      }
+    }
+    .threeCol {
+      input,
+      select {
+        margin-right: 9px;
+        width: calc(33.3% - 9px);
+      }
+    }
+    .next {
+      background: #ed721d;
+      border-radius: 8px;
+      border: none;
+      padding: 18px 20px 14px;
+      margin: 21px 9px -19px;
+      float: right;
+      font-family: Grotesk-Regular2;
+      font-size: 24px;
+      line-height: normal;
+      color: #f1f1f1;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+    }
+  }
+}

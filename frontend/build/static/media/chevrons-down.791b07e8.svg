@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>chevrons-down</title>
+    <defs>
+        <filter x="-3.9%" y="-18.5%" width="107.9%" height="136.9%" filterUnits="objectBoundingBox" id="filter-1">
+            
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M6.58222164,12.2928932 C6.99070107,11.9023689 7.65297709,11.9023689 8.06145652,12.2928932 L8.06145652,12.2928932 L12.5517241,16.5857864 L17.0419918,12.2928932 C17.4504712,11.9023689 18.1127472,11.9023689 18.5212266,12.2928932 C18.9297061,12.6834175 18.9297061,13.3165825 18.5212266,13.7071068 L18.5212266,13.7071068 L13.2913416,18.7071068 C12.8828621,19.0976311 12.2205861,19.0976311 11.8121067,18.7071068 L11.8121067,18.7071068 L6.58222164,13.7071068 C6.17374221,13.3165825 6.17374221,12.6834175 6.58222164,12.2928932 Z M6.58222164,5.29289322 C6.99070107,4.90236893 7.65297709,4.90236893 8.06145652,5.29289322 L8.06145652,5.29289322 L12.5517241,9.58578644 L17.0419918,5.29289322 C17.4504712,4.90236893 18.1127472,4.90236893 18.5212266,5.29289322 C18.9297061,5.68341751 18.9297061,6.31658249 18.5212266,6.70710678 L18.5212266,6.70710678 L13.2913416,11.7071068 C12.8828621,12.0976311 12.2205861,12.0976311 11.8121067,11.7071068 L11.8121067,11.7071068 L6.58222164,6.70710678 C6.17374221,6.31658249 6.17374221,5.68341751 6.58222164,5.29289322 Z" id="path-2"></path>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Find-Employer-1440" transform="translate(-586.000000, -578.000000)">
+            <g id="FDW" transform="translate(382.500000, 305.000000)">
+                <g id="Group" filter="url(#filter-1)" transform="translate(185.500000, 250.000000)">
+                    <g id="chevrons-down" transform="translate(16.000000, 20.000000)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Combined-Shape" fill="#2D2D2D" fill-rule="nonzero" xlink:href="#path-2"></use>
+                        <g id="Group" mask="url(#mask-3)" fill="#2D2D2D">
+                            <g id="COLOR/-black">
+                                <rect id="Rectangle" x="0" y="0" width="25.1034483" height="24"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

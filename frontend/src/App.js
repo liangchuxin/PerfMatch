@@ -14,6 +14,7 @@ import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import FindPassword from "./components/FindMyPassword";
 import JoinEmployerPage from "./components/JoinEmployerPage";
+import CompleteDetails from "./components/CompleteDetails";
 import Employer from "./components/Employer";
 // import Employee from "./component/Employee";
 import "./style/App.scss";
@@ -24,9 +25,14 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/signup/:identity" component={SignUp} />
+        <Route exact path="/signup" component={SignUp} />
         <Route exact path="/findmypassword" component={FindPassword} />
         <Route exact path="/login" component={Login} />
+        <Route
+          exact
+          path="/complete-your-details"
+          component={CompleteDetails}
+        />
         <Route path="/joinEmployer" component={JoinEmployerPage} />
         <Route path="/employer/:id" component={Employer} />
         {/* <Route path='/employee/:id' component={Employee}/> */}

@@ -20,6 +20,9 @@
     margin-bottom: 39px;
     width: 100%;
     max-width: 429px;
+    input {
+      width: 100%;
+    }
     .icoContainer {
       display: flex;
       position: relative;
@@ -29,20 +32,6 @@
       position: absolute;
       top: 25px;
       left: 39px;
-    }
-    input,
-    button {
-      border-radius: 8px;
-      padding: 23px 80px 20px;
-      line-height: 0;
-    }
-    input {
-      background: #f9f7f7;
-      width: 100%;
-      border: 1px solid #e8e4e4;
-      font-family: URWGrotesk-Regular3;
-      font-size: 24px;
-      //   caret-color: #cdcecf;
     }
     input[type="checkbox"] {
       width: unset;
@@ -151,4 +140,21 @@
 }
 .header {
   box-shadow: none !important;
+}
+form {
+  input,
+  button,
+  select {
+    border-radius: 8px;
+    padding: 23px 80px 20px;
+    line-height: 0;
+  }
+  input,
+  select {
+    background: #f9f7f7;
+    border: 1px solid #e8e4e4;
+    font-family: URWGrotesk-Regular3;
+    font-size: 24px;
+    //   caret-color: #cdcecf;
+  }
 }
