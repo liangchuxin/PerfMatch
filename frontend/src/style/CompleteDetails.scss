@@ -30,7 +30,9 @@
     top: 0;
     z-index: 99;
     .tabs {
-      padding: 24px 194px;
+      padding: 24px;
+      margin: 0 auto;
+      max-width: 1053px;
       display: flex;
       justify-content: space-between;
       span {
@@ -38,7 +40,7 @@
         padding-bottom: 26px;
       }
       span.tab {
-        padding: 26px 18px;
+        padding: 26px 22px;
         font-family: GroteskLight;
         font-size: 21px;
         letter-spacing: 1.5px;
@@ -46,17 +48,41 @@
         -webkit-font-smoothing: antialiased;
         border-radius: 8px;
         cursor: pointer;
+        transition: 0.3s;
+      }
+      span.tab:hover {
+        background: #efeeee;
       }
       span.tab.active {
+        display: block;
         background: #ffffff;
         font-family: Grotesk-Regular2;
         color: #ed721d;
+        padding: 26px 18px;
       }
+    }
+    .active .tabIcon {
+      g#Group,
+      use#Combined-Shape,
+      use#Shape {
+        fill: #ed721d;
+      }
+      transition: 0.3s;
+    }
+    .tabIcon {
+      vertical-align: sub;
+      margin-right: 16px;
+      transition: 0.3s;
     }
   }
   .fields {
     justify-content: center;
     height: calc(100vh - 125px);
+    display: block;
+    transition: 0.3s;
+  }
+  .fields.inactive {
+    display: none;
   }
   .fields,
   form {
@@ -122,19 +148,42 @@
         width: calc(33.3% - 9px);
       }
     }
-    .next {
-      background: #ed721d;
+    .next,
+    .prev {
       border-radius: 8px;
       border: none;
       padding: 18px 20px 14px;
       margin: 21px 9px -19px;
-      float: right;
       font-family: Grotesk-Regular2;
       font-size: 24px;
       line-height: normal;
-      color: #f1f1f1;
       letter-spacing: 1.5px;
       cursor: pointer;
+      transition: 0.3s;
+    }
+    .next:hover {
+      background: #ff8937;
+    }
+    .prev:hover {
+      background: #efeeee;
+    }
+    .next {
+      background: #ed721d;
+      color: #f1f1f1;
+      float: right;
+      img {
+        margin-left: 13px;
+        vertical-align: text-top;
+      }
+    }
+    .prev {
+      background: #f9f7f7;
+      color: #ed721d;
+      float: left;
+      img {
+        margin-right: 13px;
+        vertical-align: top;
+      }
     }
   }
 }

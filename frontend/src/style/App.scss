@@ -29,7 +29,9 @@ a {
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
     p.description {
-      margin: 0 112px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 497px;
       color: #ffffff;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       font-weight: 200;
