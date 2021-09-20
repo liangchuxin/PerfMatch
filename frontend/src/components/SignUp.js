@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { useHistory, Redirect } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../style/SignUp.scss";
@@ -10,23 +9,53 @@ import lock from "../icons/lock.svg";
 import user from "../icons/user.svg";
 import mail from "../icons/mail-light.svg";
 
-function SignUp(props) {
-  const identity = props.match.params.identity;
+async function loginUser(accountData) {
+  return fetch("api/getToken", {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(accountData)
+  })
+  .then(data => data.json())
+}
+
+function SignUp({ token, setToken }) {
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
+
+  const handleRegister = async e => {
+    e.preventDefault();
+    const token = await loginUser({
+      username,
+      password
+    });
+    setToken(token);
+  };
+
+  // const identity = props.match.params.identity;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const history = useHistory();
+
+  if (token) {
+    return <Redirect to='/joinEmployer' />
+  }
+
   return (
     <div className="App">
       <Header />
       <div className="container">
         <h1>Create an account</h1>
-        <form>
+        <form onSubmit={handleRegister}>
           <span className="icoContainer">
             <span className="icoPlaceholder">
               <img src={user} />
             </span>
-            <input name="username" placeholder="Username *" />
+            <input name="username" placeholder="Username *" onChange={e => setUsername(e.target.value)}/>
           </span>
           <span className="icoContainer">
             <span className="icoPlaceholder">
@@ -38,9 +67,9 @@ function SignUp(props) {
             <span className="icoPlaceholder">
               <img src={lock} />
             </span>
-            <input name="password" type="password" placeholder="Password *" />
+            <input name="password" type="password" placeholder="Password *" onChange={e => setPassword(e.target.value)} />
           </span>
-          <button onClick={() => history.push("/api/CreateEmployer")}>
+          <button type="submit">
             REGISTER
             <span style={{ marginLeft: "20px" }} className="arrow">
               <img src={arrowRight} />
