@@ -3,6 +3,7 @@ from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from .serializers import EmployerSerializer, EmployeeSerializer, CreateEmployerSerializer
 from .models import Employer, Employee
 
@@ -40,7 +41,7 @@ class CreateEmployerView(APIView):
             self.request.session.create()
         
         serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid():
+        if serializer.is_valid(raise_exception=True):
             employer = Employer(name=serializer.data.get('name'), 
                 age=serializer.data.get('age'),
                 profile_photo=serializer.data.get('profile_photo'), 
@@ -49,3 +50,7 @@ class CreateEmployerView(APIView):
             employer.save()
         
         return Response(EmployeeSerializer(employer).data, status=status.HTTP_201_CREATED)
+
+@api_view(('POST',))
+def getToken(request):
+    return Response({'token': 'test123'}, status=status.HTTP_200_OK)

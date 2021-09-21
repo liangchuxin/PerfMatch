@@ -21,4 +21,9 @@ class Employee(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
+class Account(models.Model):
+    username = models.CharField(max_length=100)
+    password = models.CharField(max_length=50)
+
+
 
