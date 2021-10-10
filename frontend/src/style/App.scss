@@ -172,7 +172,22 @@ a {
       text-align: center;
       line-height: 86px;
       font-weight: 900;
+      width: 100%;
       margin: 0;
+    }
+    .underline {
+      position: relative;
+      display: inline-block;
+    }
+    .underline::before {
+      content: "";
+      background-color: #ffc094;
+      height: 21px;
+      width: calc(100% + 10px);
+      margin: 0 -5px;
+      top: 62%;
+      z-index: -1;
+      position: absolute;
     }
     .accent {
       color: #ed721d;

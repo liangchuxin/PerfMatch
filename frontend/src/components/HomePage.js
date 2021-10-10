@@ -223,7 +223,7 @@ function HomePage() {
         <div className="description">
           <p className="capital">HOW TO GET STARTED WITH PERF MATCH?</p>
           <h2 className="slogan">
-            Find your <span className="underline">perfect</span> match within
+            Find your <div className="underline">perfect</div> match within
             <br />a few minutes.
           </h2>
           <h2 className="slogan accent">No payment required.</h2>

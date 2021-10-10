@@ -1,0 +1,69 @@
+.mainWrapper {
+  height: calc(100vh - 84px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .contentWrapper {
+    max-width: 909.5px;
+    box-sizing: border-box;
+    width: 100%;
+    h1 {
+      font-family: Heebo;
+      font-size: 36px;
+      font-weight: 900;
+    }
+    .cardContainer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 82px -53px 45px 0;
+      .card {
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding-left: 129px;
+        max-width: 405px;
+        height: 150px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 53px;
+        margin-bottom: 37px;
+        background: #ffffff;
+        transform: 0;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+        img {
+          position: absolute;
+          left: 26px;
+        }
+        .text {
+          * {
+            margin: 0;
+          }
+          .cardName {
+            font-family: URWGrotesk-Regular3;
+            font-size: 24px;
+            margin-bottom: 2px;
+          }
+          .accent {
+            color: #ed721d;
+          }
+          .instruction {
+            font-family: GroteskLight;
+            font-size: 18px;
+            font-family: GroteskLight;
+            font-size: 18px;
+            color: rgba(45, 45, 45, 0.5);
+            font-weight: 200;
+          }
+        }
+      }
+      .card:hover {
+        box-shadow: 0 20px 75px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

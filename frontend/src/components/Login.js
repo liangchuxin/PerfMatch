@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -15,6 +15,9 @@ function Login() {
     window.scrollTo(0, 0);
   }, []);
   const history = useHistory();
+  // if (token) {
+  //   return <Redirect to="/joinEmployer" />;
+  // }
   return (
     <div className="App">
       <Header />

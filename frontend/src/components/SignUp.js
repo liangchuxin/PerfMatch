@@ -11,25 +11,24 @@ import mail from "../icons/mail-light.svg";
 
 async function loginUser(accountData) {
   return fetch("api/getToken", {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
+      Accept: "application/json",
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(accountData)
-  })
-  .then(data => data.json())
+    body: JSON.stringify(accountData),
+  }).then((data) => data.json());
 }
 
 function SignUp({ token, setToken }) {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  const handleRegister = async e => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     const token = await loginUser({
       username,
-      password
+      password,
     });
     setToken(token);
   };
@@ -42,7 +41,7 @@ function SignUp({ token, setToken }) {
   const history = useHistory();
 
   if (token) {
-    return <Redirect to='/joinEmployer' />
+    return <Redirect to="/userHome" />;
   }
 
   return (
@@ -55,7 +54,11 @@ function SignUp({ token, setToken }) {
             <span className="icoPlaceholder">
               <img src={user} />
             </span>
-            <input name="username" placeholder="Username *" onChange={e => setUsername(e.target.value)}/>
+            <input
+              name="username"
+              placeholder="Username *"
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </span>
           <span className="icoContainer">
             <span className="icoPlaceholder">
@@ -67,7 +70,12 @@ function SignUp({ token, setToken }) {
             <span className="icoPlaceholder">
               <img src={lock} />
             </span>
-            <input name="password" type="password" placeholder="Password *" onChange={e => setPassword(e.target.value)} />
+            <input
+              name="password"
+              type="password"
+              placeholder="Password *"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </span>
           <button type="submit">
             REGISTER
