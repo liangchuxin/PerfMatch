@@ -14,6 +14,7 @@ import JoinEmployerPage from "./components/JoinEmployerPage";
 import CompleteDetails from "./components/CompleteDetails";
 import Employer from "./components/Employer";
 import useToken from "./components/useToken";
+import MatchList from "./components/MatchList";
 // import Employee from "./component/Employee";
 import "./style/App.scss";
 import "./style/Fonts.scss";
@@ -46,6 +47,7 @@ function App() {
           path="/complete-your-details"
           component={CompleteDetails}
         />
+        <Route path="/matches" component={MatchList} />
         <Route path="/user" component={JoinEmployerPage} />
         <Route path="/employer/:id" component={Employer} />
         {/* <Route path='/employee/:id' component={Employee}/> */}

@@ -1,0 +1,132 @@
+.pageContainer {
+  background: #f8fafc;
+}
+.matchContainer {
+  display: flex;
+  justify-content: center;
+  margin: 135px 0;
+}
+// capital ones
+.matchTab a,
+.options {
+  text-transform: uppercase;
+}
+//
+h1 {
+  font-size: 36px !important;
+  margin: 0;
+}
+.matchTab a,
+.optionLabel,
+.optionItems a {
+  font-family: Heebo;
+  font-weight: 800;
+}
+.matchTab {
+  margin: 77px auto 54px;
+  text-align: center;
+  position: relative;
+  span,
+  a {
+    font-size: 14px;
+    letter-spacing: 1.79px;
+    margin: 21px;
+    color: #8f8f8f;
+    cursor: pointer;
+  }
+  a.active {
+    color: #ed721d;
+    position: relative;
+  }
+  a.active::after {
+    position: absolute;
+    content: "";
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 21px;
+    height: 2px;
+    bottom: -4px;
+    background-color: #ed721d;
+    transition: 0.3s;
+  }
+  a.active:hover::after {
+    width: 50px;
+  }
+}
+.matchCard {
+  width: 654px;
+  background: #ffffff;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 25px;
+  display: flex;
+  .profilePic {
+    img {
+      width: 147px;
+      border-radius: 6px;
+      margin-right: 34px;
+    }
+  }
+  .profileMeta {
+    display: flex;
+    span {
+      margin-right: 70px;
+      * {
+        display: inline-block;
+      }
+      h3 {
+        margin: 0;
+        font-family: Heebo;
+        font-size: 14px;
+        line-height: 25px;
+        color: #8f8f8f;
+        letter-spacing: 1.79px;
+        font-weight: 800;
+      }
+      p {
+        margin: 0 0 0 13px;
+        font-family: Heebo;
+        font-size: 24px;
+        line-height: 53px;
+        color: #2d2d2d;
+        text-align: center;
+        font-weight: 900;
+      }
+    }
+  }
+  .profileDescrip {
+    font-size: 18px;
+    color: #8f8f8f;
+    line-height: 24px;
+    font-weight: 200;
+    margin: 9px 0 0;
+  }
+}
+.options,
+.matches {
+  display: inline-block;
+  vertical-align: top;
+}
+.options {
+  margin-right: 92px;
+  .optionLabel {
+    font-size: 11px;
+    color: rgba(165, 165, 165, 0.5);
+    letter-spacing: 1.41px;
+  }
+  .optionItems {
+    margin-bottom: 50px;
+    a {
+      display: block;
+      font-size: 14px;
+      color: #8f8f8f;
+      letter-spacing: 1.79px;
+      margin-top: 13px;
+      cursor: pointer;
+    }
+    .active {
+      color: #ed721d;
+    }
+  }
+}
