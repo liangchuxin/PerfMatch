@@ -6,11 +6,49 @@ import Footer from "./Footer";
 // import FadeInSection from "./FadeIn";
 // import "../style/FadeIn.scss";
 import MatchBlock from "./RecentMatch";
+import Employer from "./Employer";
 
 function MatchList() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    getEmployerDetails();
   }, []);
+
+  // Fetch from restapi
+
+  const [employer, setEmployer] = useState({
+    id: 0,
+    name: "",
+    age: -1,
+    profilePhoto: null,
+    description: "",
+    email: null,
+    createdAt: null,
+  });
+
+  // const id = props.match.params.id;
+  const id = 1;
+
+  // const getEmployerDetails = () => {
+  //   fetch("/api/getEmployer" + "?id=" + id)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setEmployer({
+  //         name: data.name,
+  //         age: data.age,
+  //         profilePhoto: data.profile_photo,
+  //         description: data.description,
+  //         email: data.email,
+  //         password: data.password,
+  //         createdAt: data.created_at,
+  //       });
+  //     });
+  // };
+
+  const profiles = ["1", "2", "3", "4", "5", "6"];
+
+  // End fetch
+
   const [employeeFeed, setEmployeeFeed] = useState([
     {
       id: 1,
@@ -67,6 +105,13 @@ function MatchList() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
   ]);
+  const getEmployerDetails = () => {
+    fetch("/api/employers")
+      .then((response) => response.json())
+      .then((data) => {
+        setEmployeeFeed(data);
+      });
+  };
   return (
     <div className="pageContainer">
       <Header />
@@ -108,11 +153,16 @@ function MatchList() {
             <a>Rating</a>
             <a>Views</a>
           </div>
+          {/* {profiles.map((profile) => {
+            <Employer id={profile} />;
+          })} */}
+          {/* <Employer id="1" /> */}
+
           {employeeFeed.map((employee) => (
             // <FadeInSection>
             <div className="matchCard">
               <div className="profilePic">
-                <img src={employee.picurl} />
+                <img src={employee.profilePhoto} />
               </div>
               <div className="profileInfo">
                 <div className="profileMeta">
@@ -125,7 +175,7 @@ function MatchList() {
                     <p>{employee.age}</p>
                   </span>
                 </div>
-                <p className="profileDescrip">{employee.descrip}</p>
+                <p className="profileDescrip">{employee.description}</p>
               </div>
             </div>
             // </FadeInSection>

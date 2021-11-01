@@ -45,7 +45,7 @@ const JoinEmployerPage = () => {
                 <p className="instruction">Modify username / email</p>
               </div>
             </div>
-            <div className="card">
+            <div className="card" onClick={() => history.push("/matches")}>
               <img src={barChart} />
               <div className="text">
                 <p className="cardName">Current match status</p>
