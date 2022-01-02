@@ -41,7 +41,7 @@ function SignUp({ token, setToken }) {
   const history = useHistory();
 
   if (token) {
-    return <Redirect to="/userHome" />;
+    return <Redirect to="/user" />;
   }
 
   return (

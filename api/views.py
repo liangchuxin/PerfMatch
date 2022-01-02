@@ -1,17 +1,20 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django_filters.filters import RangeFilter
+from django_filters import rest_framework as filters
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .serializers import EmployerSerializer, EmployeeSerializer, CreateEmployerSerializer
 from .models import Employer, Employee
+from .filters import EmployerFilter
 
 # Create your views here.
 
 class EmployerView(generics.ListAPIView):
     queryset = Employer.objects.all()
     serializer_class = EmployerSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filterset_class = EmployerFilter
 
 
 class EmployeeView(generics.ListAPIView):
@@ -46,7 +49,8 @@ class CreateEmployerView(APIView):
                 age=serializer.data.get('age'),
                 profile_photo=serializer.data.get('profile_photo'), 
                 description=serializer.data.get('description'),
-                email=serializer.data.get('email'))
+                email=serializer.data.get('email'),
+                year_of_experience=serializer.data.get('year_of_experience'))
             employer.save()
         
         return Response(EmployeeSerializer(employer).data, status=status.HTTP_201_CREATED)

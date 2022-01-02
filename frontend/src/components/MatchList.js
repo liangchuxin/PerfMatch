@@ -7,12 +7,27 @@ import Footer from "./Footer";
 // import "../style/FadeIn.scss";
 import MatchBlock from "./RecentMatch";
 import Employer from "./Employer";
+import Slider from '@material-ui/core/Slider';
 
 function MatchList() {
   useEffect(() => {
     window.scrollTo(0, 0);
     getEmployerDetails();
   }, []);
+
+  const ageRangeSelector = (event, newValue) => {
+    setAgeRange(newValue);
+    getEmployerDetails()
+  };
+
+  const yoeRangeSelector = (event, newValue) => {
+    setYoeRange(newValue);
+    getEmployerDetails()
+  };
+
+  const [ageRange, setAgeRange] =  React.useState([0, 100]);
+
+  const [yoeRange, setYoeRange] =  React.useState([-1, 100]);
 
   // Fetch from restapi
 
@@ -26,98 +41,42 @@ function MatchList() {
     createdAt: null,
   });
 
-  // const id = props.match.params.id;
-  const id = 1;
-
-  // const getEmployerDetails = () => {
-  //   fetch("/api/getEmployer" + "?id=" + id)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setEmployer({
-  //         name: data.name,
-  //         age: data.age,
-  //         profilePhoto: data.profile_photo,
-  //         description: data.description,
-  //         email: data.email,
-  //         password: data.password,
-  //         createdAt: data.created_at,
-  //       });
-  //     });
-  // };
-
-  const profiles = ["1", "2", "3", "4", "5", "6"];
 
   // End fetch
 
-  const [employeeFeed, setEmployeeFeed] = useState([
-    {
-      id: 1,
-      name: "Jake",
-      age: "33",
-      picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-john.png",
-      descrip:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    },
-    {
-      id: 2,
-      name: "Milena",
-      age: "35",
-      picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jane.png",
-      descrip:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    },
-    {
-      id: 3,
-      name: "Joseph",
-      age: "53",
-      picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jack.png",
-      descrip:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    },
-    {
-      id: 1,
-      name: "Jake",
-      age: "33",
-      picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-john.png",
-      descrip:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    },
-    {
-      id: 2,
-      name: "Milena",
-      age: "35",
-      picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jane.png",
-      descrip:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    },
-    {
-      id: 3,
-      name: "Joseph",
-      age: "53",
-      picurl:
-        "https://cdn.jsdelivr.net/gh/liangchuxin/perfmatch-files/images/profile-jack.png",
-      descrip:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    },
-  ]);
+  const id = 1;
+  const [employeeFeed, setEmployeeFeed] = useState([]);
+
   const getEmployerDetails = () => {
-    fetch("/api/employers")
+    fetch(`/api/employers?age_min=${ageRange[0]}&age_max=${ageRange[1]}&yoe_min=${yoeRange[0]}&yoe_max=${yoeRange[1]}`)
       .then((response) => response.json())
       .then((data) => {
         setEmployeeFeed(data);
       });
   };
+
   return (
     <div className="pageContainer">
       <Header />
       {/* <MatchBlock employeeFeed={employeeFeed} /> */}
       <div className="matchContainer">
         <div className="options">
+        <div className="optionLabel">Age</div>
+          <div className="optionItems">
+            <Slider 
+              value={ageRange}
+              onChange={ageRangeSelector}
+              valueLabelDisplay="auto"
+            />
+          </div>
+          <div className="optionLabel">Year Of Experience</div>
+          <div className="optionItems">
+            <Slider 
+              value={yoeRange}
+              onChange={yoeRangeSelector}
+              valueLabelDisplay="auto"
+            />
+          </div>
           <div className="optionLabel">Categories</div>
           <div className="optionItems">
             <a className="active">All</a>
@@ -158,7 +117,20 @@ function MatchList() {
           })} */}
           {/* <Employer id="1" /> */}
 
-          {employeeFeed.map((employee) => (
+          {employeeFeed.length == 0 ? 
+
+                <div className="matchCard">
+                  <div className="profileInfo">
+                    <div className="profileMeta">
+                      <span>
+                        <h3>Sorry. We couldn't find you a match at this time. Please come back later.</h3>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+          
+          
+          : employeeFeed.map((employee) => (
             // <FadeInSection>
             <div className="matchCard">
               <div className="profilePic">
@@ -173,6 +145,10 @@ function MatchList() {
                   <span>
                     <h3>AGE</h3>
                     <p>{employee.age}</p>
+                  </span>
+                  <span>
+                    <h3>Year Of Experience</h3>
+                    <p>{employee.year_of_experience}</p>
                   </span>
                 </div>
                 <p className="profileDescrip">{employee.description}</p>
