@@ -1,4 +1,6 @@
 from django_filters.filters import RangeFilter
+from rest_framework.filters import OrderingFilter
+from django_filters.rest_framework import DjangoFilterBackend, FilterSet
 from django_filters import rest_framework as filters
 from rest_framework import generics, status
 from rest_framework.views import APIView
@@ -13,13 +15,14 @@ from .filters import EmployerFilter
 class EmployerView(generics.ListAPIView):
     queryset = Employer.objects.all()
     serializer_class = EmployerSerializer
-    filter_backends = (filters.DjangoFilterBackend,)
+    filter_backends = (filters.DjangoFilterBackend,OrderingFilter,)
     filterset_class = EmployerFilter
-
+    ordering_fields = '__all__'
 
 class EmployeeView(generics.ListAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
+
 
 
 class GetEmployerView(APIView):

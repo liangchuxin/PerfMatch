@@ -80,9 +80,11 @@ a {
   padding: 81px 139px;
   .bar:before {
     content: "";
+    height: 33px;
     position: relative;
     right: 15px;
-    border: 16px #ffc094 solid;
+    display: inline-block;
+    border: solid #ffc094;
     border-width: 0 0 0 16px;
   }
   h2 {
