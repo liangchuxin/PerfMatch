@@ -75,41 +75,40 @@ function BpCheckbox(props) {
   );
 }
 function MatchList() {
+  const [active, setActive] = useState("null");
+  const [ageRange, setAgeRange] = useState([20, 60]);
+  const [yoeRange, setYoeRange] = useState([-1, 100]);
+  const [orderOpt, setOrderOpt] = useState("null");
+  const [checked, setChecked] = useState(true);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     getEmployerDetails();
   }, []);
 
+
+  useEffect(() => {
+    console.log("use effect");
+    getEmployerDetails();
+  }, [orderOpt, yoeRange, ageRange]);
+
   const ageRangeSelector = (event, newValue) => {
     setAgeRange(newValue);
-    getEmployerDetails();
   };
 
   const yoeRangeSelector = (event, newValue) => {
     setYoeRange(newValue);
-    getEmployerDetails();
   };
 
   const clickSetYoe = (range) => {
     setYoeRange(range);
-    getEmployerDetails();
   };
 
   const clickSetOrder = (order) => {
+    console.log("set order");
     setOrderOpt(order);
-    getEmployerDetails();
     setActive(order);
   };
-
-  const [active, setActive] = useState("null");
-
-  const [ageRange, setAgeRange] = React.useState([20, 60]);
-
-  const [yoeRange, setYoeRange] = React.useState([-1, 100]);
-
-  const [orderOpt, setOrderOpt] = React.useState("null");
-
-  const [checked, setChecked] = React.useState(true);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
